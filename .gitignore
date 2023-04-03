@@ -1,0 +1,5 @@
+# Ignoramos los archivos que produce la compilacion de pdflatex
+*.aux
+*.log
+*.pdf
+*.gz
