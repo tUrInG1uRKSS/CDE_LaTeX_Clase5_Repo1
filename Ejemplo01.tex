@@ -64,13 +64,66 @@ Veamos un ejemplo :
 	$a_{11}$ & $a_{12}$ & $a_{13}$ & $a_{14}$\\
 	$a_{21}$ & $a_{22}$ & $a_{23}$ & \lipsum[2]
 \end{tabular}
-
-
-
-
 \end{itemize}
 
+\section{Agreguemos lineas horizontales y verticales a tabular}
 
+\noindent Sintaxis
+
+\begin{verbatim}
+	\begin{tabular}[posicion]{Definicion}
+		a_{11} & a_{12} & a_{13} \\
+		a_{21} & a_{22} & a_{23}
+	\end{tabular}
+\end{verbatim}
+
+Notar el uso de \verb*|hline| y la barra vertical
+
+\begin{verbatim}
+	\begin{tabular}[]{|c|c|c|}
+		\hline
+		a_{11} & a_{12} & a_{13} \\
+		\hline \\
+		\hline
+		a_{21} & a_{22} & a_{23}
+		\hline
+	\end{tabular}
+\end{verbatim}
+
+En ejecución :
+\begin{center}
+\begin{tabular}[]{|c|c|c|}
+	\hline
+	$a_{11}$ & $a_{12}$ & $a_{13}$ \\
+	\hline 
+	$a_{21}$ & $a_{22}$ & $a_{23}$ \\
+	\hline
+	$a_{21}$ & $a_{22}$ & $a_{23}$ \\
+	\hline
+	$a_{21}$ & $a_{22}$ & $a_{23}$ \\
+	\hline
+	$a_{21}$ & $a_{22}$ & $a_{23}$ \\
+	\hline
+\end{tabular}
+\end{center}
+
+\subsection{cline}
+El comando \verb*|cline{i-j}| trazara la linea horizontal entre las columnas de la \verb*|i| a la \verb*|j|.
+\begin{center}
+	\begin{tabular}{cccr}
+		\hline
+		Producto & Precio Unitario & Cantidad & Subtotal \\
+		\hline
+		Monitores & 1250 & 2 & 2500\\
+				  & 2780 & 2 & 5560\\
+				  & 16800 & 4 & 67200\\
+		\hline
+		GPU		  & 2500 & 2 & 5000\\
+				  & 3700 & 3 & 11100\\
+				  \cline{4-4}
+				  &      &   & 78300
+	\end{tabular}
+\end{center}
 
 
 \end{document}
