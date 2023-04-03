@@ -1,0 +1,76 @@
+\documentclass{article}
+\usepackage[spanish]{babel}
+\usepackage{amsmath, amssymb}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{xcolor}
+
+% Agreguemos el paquete array
+\usepackage{array}
+
+\title{CDE \LaTeX}
+\author{Clase 5}
+\date{27 de marzo del 2023}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+	\lipsum[2]
+\end{abstract}
+
+\section{El entorno tabular}
+\noindent Sintaxis
+
+\begin{verbatim}
+\begin{tabular}[posicion]{Definicion}
+a_{11} & a_{12} & a_{13} \\
+a_{21} & a_{22} & a_{23}
+\end{tabular}
+\end{verbatim}
+
+Profundicemos en el argumento \verb*|Definicion|:
+Definiremos el numero de columnas y la justificación de cada una de esas columnas.
+\begin{itemize}
+\item Usar las letras \verb*|l| (left), \verb*|c| (center) y \verb*|r| (right) para justificar el texto dentro de cada columna
+\begin{verbatim}
+	\begin{tabular}[]{lrrc}
+		a_{11} & a_{12} & a_{13} & a_{14}\\
+		a_{21} & a_{22} & a_{23} & a_{24}
+	\end{tabular}
+\end{verbatim}
+
+Veamos un ejemplo :
+
+\begin{tabular}[]{lrrc}
+	$a_{11}$ & $a_{12}$ & $a_{13}$ & $a_{14}$\\
+	$a_{21}$ & $a_{22}$ & $a_{23}$ & $a_{24}$
+\end{tabular}
+
+Veamos otro ejemplo :
+
+\begin{tabular}[]{lrrc}
+	$a_{11}$ & $a_{12}$ & $a_{13}$ & $a_{14}$\\
+	$a_{21}$ & $a_{22}$ & $a_{23}$ & \lipsum[2]
+\end{tabular}
+
+
+\item Definamos un párrafo como elemento de un \verb*|tabular|
+
+Veamos un ejemplo : 
+
+\begin{tabular}[]{lrrp{9cm}}
+	$a_{11}$ & $a_{12}$ & $a_{13}$ & $a_{14}$\\
+	$a_{21}$ & $a_{22}$ & $a_{23}$ & \lipsum[2]
+\end{tabular}
+
+
+
+
+\end{itemize}
+
+
+
+
+\end{document}
