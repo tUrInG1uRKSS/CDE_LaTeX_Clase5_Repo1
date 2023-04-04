@@ -125,5 +125,136 @@ El comando \verb*|cline{i-j}| trazara la linea horizontal entre las columnas de 
 	\end{tabular}
 \end{center}
 
+\subsection{Encolumnar el punto decimal}
+Consideremos que tenemos 4 números punto flotante, donde cada uno de estos números posee una distinta cantidad de cifras en la mantisa : 3.14159, 2.71, 123.4567, 0. 
+
+\begin{center}
+	\begin{tabular}{cl}
+		\hline
+		Var1 & 3.14159\\
+		Var2 & 2.71\\
+		Var3 & 123.4567\\
+		Var4 & 0\\
+		\hline
+	\end{tabular}
+\end{center}
+
+Consideremos arreglar/encolumnar la ubicación del punto decimal . 
+
+\begin{center}
+	\begin{tabular}{cr@{.}l}
+		Var & Numeritos & \\
+		\hline
+		Var1 & 3&14159\\
+		Var2 & 2&71\\
+		Var3 & 123&4567\\
+		Var4 & 0&\\
+		\hline
+	\end{tabular}
+\end{center}
+
+\section{Construcción del indice de figuras}
+\lipsum[2-5]
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.6\textwidth]{Figuras/deepma.jpg}
+	\caption{Función de Costo}
+	\label{fig: Costo}
+\end{figure}
+\lipsum[1-9]
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.6\textwidth]{Figuras/gausskl.jpg}
+	\caption{El Príncipe : Gauss}
+	\label{fig: gauss}
+\end{figure}
+\lipsum[3]
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.6\textwidth]{Figuras/descarga.jpg}
+	\caption{Julio Ramon Ribeyro}
+	\label{fig: Maestro}
+\end{figure}
+
+\lipsum[3-7]
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.6\textwidth]{Figuras/Data-science-without-mathematics.jpg}
+	\caption{Red Neuronal}
+	\label{fig: perceptron}
+\end{figure}
+
+\section{Construcción del indice de tablas}
+\lipsum[15]
+\begin{table}[h]
+	\centering
+	\begin{tabular}{cccr}
+		\hline
+		Producto & Precio Unitario & Cantidad & Subtotal \\
+		\hline
+		Monitores & 1250 & 2 & 2500\\
+		& 2780 & 2 & 5560\\
+		& 16800 & 4 & 67200\\
+		\hline
+		GPU		  & 2500 & 2 & 5000\\
+		& 3700 & 3 & 11100\\
+		\cline{4-4}
+		&      &   & 78300
+	\end{tabular}
+\caption{Costo de monitor y Co-Procesador Matematico}
+\label{table:1}
+\end{table}
+
+\lipsum[5-9]
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{cccr}
+		\hline
+		Producto & Precio Unitario & Cantidad & Subtotal \\
+		\hline
+		Monitores & 1250 & 2 & 2500\\
+		& 2780 & 2 & 5560\\
+		& 16800 & 4 & 67200\\
+		\hline
+		GPU		  & 2500 & 2 & 5000\\
+		& 3700 & 3 & 11100\\
+		\cline{4-4}
+		&      &   & 78300
+	\end{tabular}
+	\caption{Costo de monitor y Co-Procesador Matematico - Version 2}
+	\label{table:2}
+\end{table}
+
+\lipsum[11-14]
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{cccr}
+		\hline
+		Producto & Precio Unitario & Cantidad & Subtotal \\
+		\hline
+		Monitores & 1250 & 2 & 2500\\
+		& 2780 & 2 & 5560\\
+		& 16800 & 4 & 67200\\
+		\hline
+		GPU		  & 2500 & 2 & 5000\\
+		& 3700 & 3 & 11100\\
+		\cline{4-4}
+		&      &   & 78300
+	\end{tabular} 
+	\caption{Costo de monitor y Co-Procesador Matematico - Tablita 3}
+	\label{table:3}
+\end{table}
+
+FIN.
+
+\newpage
+\listoftables
+\listoffigures
+\tableofcontents
 
 \end{document}
